@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario 5J</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 13px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            text-align: center;
+            padding: 4px;
+        }
+
+        /* Encabezados y textos especiales */
+        .title-5j {
+            color: #0070c0;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            padding-bottom: 10px;
+        }
+        
+        .header-day {
+            color: #0070c0;
+            font-weight: bold;
+        }
+
+        .time-col {
+            color: #0070c0;
+            width: 60px;
+        }
+
+        .recreo {
+            color: #0070c0;
+            font-weight: bold;
+            background-color: #fff;
+        }
+
+        /* Colores de las materias */
+        .color-ch { background-color: #fafa4d; } /* Amarillo */
+        .color-apli { background-color: #cfd150; } /* Verde olivo claro */
+        .color-ingles { background-color: #96834d; } /* Café verdoso */
+        .color-prog1 { background-color: #fe7e22; } /* Naranja */
+        .color-cneyt { background-color: #7df831; } /* Verde brillante */
+        .color-prog2 { background-color: #b3b7bb; } /* Gris */
+        .color-fs { background-color: #a743fa; } /* Morado */
+        .color-tsdm { background-color: #04b638; } /* Verde oscuro */
+
+        /* Estilos específicos para la tabla de profesores (Leyenda) */
+        .legend-table {
+            border: none;
+        }
+        .legend-table th {
+            color: #0070c0;
+            border: none;
+            border-bottom: 2px dotted #0070c0;
+            padding: 5px;
+            text-align: left;
+        }
+        .legend-table td {
+            border: none;
+            text-align: left;
+            padding: 5px;
+        }
+        .legend-table .border-bottom-dotted {
+            border-bottom: 1px dotted #000;
+        }
+        .legend-table .materia-cell {
+            border: 1px solid #333;
+            text-align: left;
+        }
+
+        /* Estilos del footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tabla Principal del Horario -->
+    <table>
+        <thead>
+            <tr>
+                <th colspan="6" class="title-5j">5J</th>
+            </tr>
+            <tr>
+                <th class="header-day">🗓️</th>
+                <th class="header-day">Lunes</th>
+                <th class="header-day">Martes</th>
+                <th class="header-day">Miércoles</th>
+                <th class="header-day">Jueves</th>
+                <th class="header-day">Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="time-col">7:00<br>8:00</td>
+                <td></td>
+                <td class="color-ch">5* CH 2<br>Juarez<br>AULA 38</td>
+                <td class="color-apli">5* Apli. Adm<br>Estrada<br>AULA 38</td>
+                <td class="color-apli">5* Apli. Adm<br>Estrada<br>AULA 38</td>
+                <td class="color-ingles">5* Ingles 5<br>Terrazas<br>AULA 38</td>
+            </tr>
+            <tr>
+                <td class="time-col">8:00<br>9:00</td>
+                <td></td>
+                <td class="color-apli">5* Apli. Adm<br>Estrada<br>AULA 38</td>
+                <td class="color-ch">5* CH 2<br>Juarez<br>AULA 38</td>
+                <td class="color-ingles">5* Ingles 5<br>Terrazas<br>AULA 38</td>
+                <td class="color-ch">5* CH 2<br>Juarez<br>AULA 38</td>
+            </tr>
+            <tr>
+                <td class="time-col">9:00<br>10:00</td>
+                <td class="color-ingles">5* Ingles 5<br>Terrazas<br>AULA 38</td>
+                <td class="color-prog1" rowspan="2">PROG M4S1<br>Meza<br>AULA 38</td>
+                <td class="color-prog1">PROG M4S1<br>Meza<br>AULA 38</td>
+                <td class="color-prog1" rowspan="2">PROG M4S1<br>Meza<br>AULA 38</td>
+                <td class="color-prog1" rowspan="2">PROG M4S1<br>Meza<br>AULA 38</td>
+            </tr>
+            <tr>
+                <td class="time-col">10:00<br>10:50</td>
+                <td class="color-cneyt">5* CNEyT 5<br>Reyes<br>AULA 38</td>
+                <td class="color-ingles">5* Ingles 5<br>Terrazas<br>AULA 38</td>
+            </tr>
+            <tr>
+                <td colspan="6" class="recreo">recreo</td>
+            </tr>
+            <tr>
+                <td class="time-col">11:10<br>12:00</td>
+                <td class="color-prog2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+                <td class="color-prog2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+                <td class="color-cneyt" rowspan="2">5* CNEyT 5<br>Reyes<br>AULA 38</td>
+                <td class="color-prog2" rowspan="2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+                <td class="color-cneyt">5* CNEyT 5<br>Reyes<br>AULA 38</td>
+            </tr>
+            <tr>
+                <td class="time-col">12:00<br>13:00</td>
+                <td class="color-fs">5* FS<br>Meza<br>AULA 38</td>
+                <td class="color-ingles">5* Ingles 5<br>Terrazas<br>AULA 38</td>
+                <td class="color-prog2">PROG M4S2<br>Gonzales A<br>AULA 38</td>
+            </tr>
+            <tr>
+                <td class="time-col">13:00<br>14:00</td>
+                <td class="color-tsdm">5* TSdM 2<br>Macias<br>AULA 38</td>
+                <td class="color-tsdm">5* TSdM 2<br>Macias<br>AULA 38</td>
+                <td class="color-tsdm">5* TSdM 2<br>Macias<br>AULA 38</td>
+                <td class="color-tsdm">5* TSdM 2<br>Macias<br>AULA 38</td>
+                <td class="color-tsdm">5* TSdM 2<br>Macias<br>AULA 38</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tabla de Profesores y Materias (Leyenda) -->
+    <table class="legend-table">
+        <thead>
+            <tr>
+                <th style="width: 50px; text-align: center;">n°hs.</th>
+                <th>Profesores</th>
+                <th>Materia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;">3</td>
+                <td class="border-bottom-dotted">ESTRADA ORTEGA MARIA ANTONIETA</td>
+                <td class="materia-cell color-apli">5* Aplicaciones de la administracion</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">5</td>
+                <td class="border-bottom-dotted">GONZALEZ AGUILERA LIDIA VIRIDIANA</td>
+                <td class="materia-cell color-prog2">Implementa aplicaciones web</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">3</td>
+                <td class="border-bottom-dotted">JUÁREZ LOZOYA GUILLERMO</td>
+                <td class="materia-cell color-ch">Conciencia Historica 2 Mexico durante el expansion</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">5</td>
+                <td class="border-bottom-dotted">MACIAS MARIO</td>
+                <td class="materia-cell color-tsdm">Temas Selectos de Matematicas 2</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">7</td>
+                <td class="border-bottom-dotted">MEZA DÍAZ LETICIA</td>
+                <td class="materia-cell color-prog1">Construye aplicaciones web</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">1</td>
+                <td class="border-bottom-dotted">MEZA DÍAZ LETICIA</td>
+                <td class="materia-cell color-fs">Formacion socioemocional 5</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">4</td>
+                <td class="border-bottom-dotted">REYES LUIS HOMERO</td>
+                <td class="materia-cell color-cneyt">Ciencias Naturales, Experimentales y Tecnologia 5</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">5</td>
+                <td class="border-bottom-dotted">TERRAZAS CERVANTES GRISELDA</td>
+                <td class="materia-cell color-ingles">Ingles 5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        Martinez Montes Erik Osvaldo 0869 5-J
+    </footer>
+
+</body>
+</html>
